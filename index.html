@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Run AI Locally — The Best Hardware for Local AI Inference</title>
+<meta name="description" content="The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more on your desk at 20W.">
+<meta name="keywords" content="run ai locally, local ai inference hardware, offline ai device, self-hosted ai inference, run llm locally hardware">
+<link rel="canonical" href="https://run-ai-locally.com/">
+<meta property="og:title" content="Run AI Locally — The Best Hardware for Local AI Inference">
+<meta property="og:description" content="The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more on your desk at 20W.">
+<meta property="og:url" content="https://run-ai-locally.com/">
+<meta property="og:image" content="https://openclawhardware.dev/clawbox-1.webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Run AI Locally — The Best Hardware for Local AI Inference">
+<meta name="twitter:description" content="The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more on your desk at 20W.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "ClawBox", "description": "The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more on your desk at 20W.", "brand": {"@type": "Brand", "name": "OpenClaw"}, "image": "https://openclawhardware.dev/clawbox-1.webp", "url": "https://openclawhardware.dev/", "offers": {"@type": "Offer", "price": "549", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--accent:#14b8a6;--bg:#0a0f1a;--bg2:#111827;--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,0.07)}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:1.3rem;font-weight:800;color:var(--accent)}
+nav a{margin-left:1.5rem;color:var(--muted);font-size:.9rem}nav a:hover{color:var(--text)}
+.hero{padding:6rem 2rem;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#0a0f1a,#0d0d1f)}
+.badge{display:inline-block;background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);padding:.3rem .9rem;border-radius:99px;font-size:.8rem;font-weight:600;margin-bottom:1.2rem;border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:1rem}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:620px;margin:0 auto 2.5rem}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:.9rem 2.5rem;border-radius:8px;font-weight:700;font-size:1rem;transition:opacity .2s;margin:0 .5rem .5rem}
+.cta-btn:hover{opacity:.85;text-decoration:none}
+.cta-sec{display:inline-block;color:var(--muted);padding:.9rem 1.5rem;font-size:.9rem}
+.micro{font-size:.82rem;color:var(--muted);margin-top:.8rem}
+.micro span{color:#22c55e;font-weight:600}
+.trust{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;text-align:center}
+.trust-items{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.trust-items span{display:flex;align-items:center;gap:.4rem}
+.section{max-width:1000px;margin:0 auto;padding:5rem 2rem}
+.section-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:.75rem}
+.section-title span{color:var(--accent)}
+.section-sub{color:var(--muted);margin-bottom:2.5rem;max-width:600px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.feat{background:var(--bg2);border-radius:12px;padding:1.5rem;border:1px solid var(--border);display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s}
+.feat:hover{border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.feat-icon{font-size:1.5rem;flex-shrink:0}
+.feat div{color:var(--muted);font-size:.95rem;line-height:1.5}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem}
+.spec{background:var(--bg2);border-radius:12px;padding:1.5rem;border:1px solid var(--border);text-align:center}
+.spec .val{font-size:1.8rem;font-weight:800;color:var(--accent)}
+.spec .lbl{font-size:.82rem;color:var(--muted);margin-top:.25rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;counter-reset:step}
+.step{background:var(--bg2);border-radius:12px;padding:1.5rem;border:1px solid var(--border);counter-increment:step}
+.step::before{content:counter(step);display:inline-flex;width:2rem;height:2rem;background:var(--accent);color:#fff;border-radius:50%;align-items:center;justify-content:center;font-weight:800;margin-bottom:.75rem}
+.step h3{color:var(--text);font-size:.95rem;font-weight:700;margin-bottom:.4rem}
+.step p{color:var(--muted);font-size:.88rem}
+.cmp{overflow-x:auto}
+.cmp-tbl{width:100%;border-collapse:collapse;min-width:540px}
+.cmp-tbl th{padding:12px 16px;text-align:left;font-size:.85rem;color:var(--muted);border-bottom:2px solid var(--border)}
+.cmp-tbl th.hi{color:var(--accent);border-bottom-color:var(--accent)}
+.cmp-tbl td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--muted);font-size:.88rem}
+.cmp-tbl td.hi{color:var(--text);font-weight:600}
+.cmp-tbl tr:last-child td{border-bottom:none}
+.ck{color:#22c55e}.cx{color:#ef4444}
+.faq-item{background:var(--bg2);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:.75rem;border:1px solid var(--border)}
+.faq-q{font-weight:600;color:var(--text);margin-bottom:.4rem}
+.faq-a{color:var(--muted);font-size:.9rem}
+.cta-box{background:color-mix(in srgb,var(--accent) 10%,var(--bg2));border-radius:16px;padding:3rem 2rem;text-align:center;border:1px solid color-mix(in srgb,var(--accent) 25%,transparent)}
+.cta-box h2{font-size:1.8rem;font-weight:800;margin-bottom:.75rem}
+.cta-box p{color:var(--muted);margin-bottom:2rem}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--accent)}
+.popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,15,26,.88);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.popup-box{background:var(--bg2);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:16px;padding:2rem 1.5rem;max-width:380px;width:100%;text-align:center}
+.popup-box h2{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+.popup-box p{color:var(--muted);font-size:.9rem;margin-bottom:.4rem}
+.popup-timer{color:var(--accent);font-size:.82rem;margin-bottom:1.25rem}
+.popup-btns{display:flex;flex-direction:column;gap:.6rem}
+.popup-accept{padding:.85rem;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;transition:opacity .2s}
+.popup-accept:hover{opacity:.85;text-decoration:none}
+.popup-cancel{padding:.75rem;background:none;color:var(--muted);border:1px solid #374151;border-radius:8px;font-size:.88rem;cursor:pointer;transition:all .2s}
+.popup-cancel:hover{color:var(--text);border-color:#4b5563}
+@media(max-width:768px){
+.hero{padding:4rem 1.25rem}
+.section{padding:3.5rem 1.25rem}
+.trust-items{gap:1rem;font-size:.75rem}
+nav{display:none}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9FY8Q06EX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q9FY8Q06EX');</script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Run AI Locally</div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#specs">Specs</a>
+    <a href="#how">How It Works</a>
+    <a href="https://openclawhardware.dev/" target="_blank">Buy Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="badge">✨ Powered by NVIDIA Jetson Orin Nano</div>
+  <h1>No Cloud. No Subscriptions. Just Local <span>AI</span>.</h1>
+  <p>The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more on your desk at 20W.</p>
+  <div>
+    <a href="https://openclawhardware.dev/" target="_blank" class="cta-btn">Get ClawBox — €549 →</a>
+    <a href="#features" class="cta-sec">See how it works ↓</a>
+  </div>
+  <p class="micro"><span>✓ 30-day money-back guarantee</span> · Free shipping EU · 5-min setup</p>
+</section>
+
+<div class="trust">
+  <div class="trust-items">
+    <span>⚡ 67 TOPS NVIDIA</span>
+    <span>💾 512GB NVMe SSD</span>
+    <span>💡 20W Power Draw</span>
+    <span>🌍 Ships Worldwide</span>
+    <span>🔒 100% Private</span>
+  </div>
+</div>
+
+<section class="section" id="features">
+  <h2 class="section-title">Why <span>Run AI Locally</span></h2>
+  <p class="section-sub">The easiest way to run AI locally. No cloud. No subscriptions. No privacy risks. ClawBox runs Llama, Whisper, and more o...</p>
+  <div class="feats">
+<div class="feat"><div class="feat-icon">🦙</div><div>Llama 3.1 8B</div></div>
+<div class="feat"><div class="feat-icon">🎤</div><div>Whisper STT</div></div>
+<div class="feat"><div class="feat-icon">🔊</div><div>Kokoro TTS</div></div>
+<div class="feat"><div class="feat-icon">⚡</div><div>15 tok/s</div></div>
+  </div>
+</section>
+
+<section class="section" id="specs" style="background:var(--bg2);max-width:100%;padding:4rem 2rem">
+  <div style="max-width:1000px;margin:0 auto">
+  <h2 class="section-title">Hardware <span>Specs</span></h2>
+  <p class="section-sub">Built on NVIDIA Jetson Orin Nano Super — the platform designed for edge AI.</p>
+  <div class="specs">
+    <div class="spec"><div class="val">67</div><div class="lbl">TOPS AI Performance</div></div>
+    <div class="spec"><div class="val">8GB</div><div class="lbl">LPDDR5 Unified Memory</div></div>
+    <div class="spec"><div class="val">512GB</div><div class="lbl">NVMe SSD Storage</div></div>
+    <div class="spec"><div class="val">20W</div><div class="lbl">Power Consumption</div></div>
+    <div class="spec"><div class="val">15</div><div class="lbl">Tokens/sec (Llama 8B)</div></div>
+    <div class="spec"><div class="val">€549</div><div class="lbl">One-Time Price</div></div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <h2 class="section-title">Set Up in <span>5 Minutes</span></h2>
+  <p class="section-sub">No Linux knowledge required. No Docker. No terminal. Just plug in and go.</p>
+  <div class="steps">
+    <div class="step"><h3>Unbox & Power On</h3><p>Connect power and ethernet (or WiFi). Device boots automatically.</p></div>
+    <div class="step"><h3>Open clawbox.local</h3><p>Navigate to clawbox.local in your browser — no IP address needed.</p></div>
+    <div class="step"><h3>Scan QR Code</h3><p>Scan with your phone to connect Telegram, WhatsApp, or Discord.</p></div>
+    <div class="step"><h3>Start Automating</h3><p>Send a message and your AI assistant is ready to work for you.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title"><span>Compare</span> Your Options</h2>
+  <p class="section-sub">See why ClawBox wins against cloud AI, DIY builds, and alternatives.</p>
+  <div class="cmp">
+  <table class="cmp-tbl">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th class="hi">ClawBox</th>
+        <th>Cloud AI (ChatGPT+)</th>
+        <th>DIY Build</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Price</td><td class="hi">€549 one-time</td><td>€20-50/month</td><td>€400-900 + time</td></tr>
+      <tr><td>Privacy</td><td class="hi"><span class="ck">✓</span> 100% local</td><td><span class="cx">✗</span> Cloud data</td><td><span class="ck">✓</span> Local</td></tr>
+      <tr><td>Setup time</td><td class="hi">5 minutes</td><td>Instant (cloud)</td><td>10-20 hours</td></tr>
+      <tr><td>24/7 operation</td><td class="hi"><span class="ck">✓</span> Always on</td><td><span class="cx">✗</span> Manual</td><td>Depends</td></tr>
+      <tr><td>Power draw</td><td class="hi">20W</td><td>N/A</td><td>80-200W</td></tr>
+      <tr><td>Offline capable</td><td class="hi"><span class="ck">✓</span> Yes</td><td><span class="cx">✗</span> No</td><td>Maybe</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Common <span>Questions</span></h2>
+  <div>
+<div class="faq-item"><div class="faq-q">❓ Which AI models run locally?</div><div class="faq-a">Ask your ClawBox — or <a href="https://openclawhardware.dev/" target="_blank">visit the store</a> for full details.</div></div>
+<div class="faq-item"><div class="faq-q">❓ How fast is local inference?</div><div class="faq-a">Ask your ClawBox — or <a href="https://openclawhardware.dev/" target="_blank">visit the store</a> for full details.</div></div>
+<div class="faq-item"><div class="faq-q">❓ Does it work offline completely?</div><div class="faq-a">Ask your ClawBox — or <a href="https://openclawhardware.dev/" target="_blank">visit the store</a> for full details.</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-box">
+    <h2>Ready to Get Your Own <span style="color:var(--accent)">Run AI Locally</span>?</h2>
+    <p>€549 one-time. 30-day money-back guarantee. Ships in 1-3 business days.</p>
+    <a href="https://openclawhardware.dev/" target="_blank" class="cta-btn" style="font-size:1.1rem;padding:1rem 3rem">Order ClawBox Now →</a>
+    <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">Questions? Email <a href="mailto:yanko@idrobots.com">yanko@idrobots.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <a href="https://openclawhardware.dev/" target="_blank">OpenClaw Hardware</a> · <a href="https://openclawhardware.dev/shipping" target="_blank">Shipping</a> · <a href="https://openclawhardware.dev/faq" target="_blank">FAQ</a> · <a href="mailto:yanko@idrobots.com">Contact</a></p>
+</footer>
+
+<div class="popup-overlay" id="redirectPopup">
+  <div class="popup-box">
+    <h2>🚀 See ClawBox in Action</h2>
+    <p>Visit the official store for full specs, demo, and secure checkout.</p>
+    <p class="popup-timer">Redirecting in <span id="countdown">10</span>s…</p>
+    <div class="popup-btns">
+      <a href="https://openclawhardware.dev/" class="popup-accept">Yes, take me there →</a>
+      <button class="popup-cancel" onclick="closePopup()">No thanks, stay here</button>
+    </div>
+  </div>
+</div>
+<script>(function(){
+var shown=false,timer=null,count=10;
+function showPopup(){
+if(shown)return;shown=true;
+document.getElementById('redirectPopup').style.display='flex';
+count=10;document.getElementById('countdown').textContent=count;
+timer=setInterval(function(){
+count--;document.getElementById('countdown').textContent=count;
+if(count<=0){clearInterval(timer);window.location.href='https://openclawhardware.dev/';}
+},1000);
+}
+window.closePopup=function(){clearInterval(timer);document.getElementById('redirectPopup').style.display='none';};
+window.addEventListener('scroll',function(){
+if((window.innerHeight+window.scrollY)>=document.body.offsetHeight-100)showPopup();
+},{passive:true});
+})();</script>
+
+</body>
+</html>
